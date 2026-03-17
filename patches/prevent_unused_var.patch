@@ -1,0 +1,7 @@
+--- a/ttnn/cpp/ttnn/operations/data_movement/pad/device/pad_rm_reader_writer_multi_core_program_factory.cpp
++++ b/ttnn/cpp/ttnn/operations/data_movement/pad/device/pad_rm_reader_writer_multi_core_program_factory.cpp
+@@ -15,3 +15,3 @@
+ inline void log_rt_args(const CoreCoord& core, std::vector<uint32_t>& args) {
+-    for (auto v : args) {
++    for (auto v [[maybe_unused]] : args) {
+         log_debug(tt::LogOp, "{},{} :: {}", core.x, core.y, v);
